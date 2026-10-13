@@ -1,9 +1,9 @@
 # moment-random
 
+> Generates a new random moment.js object
+
 [![CI](https://github.com/perpaer/moment-random/actions/workflows/ci.yml/badge.svg)](https://github.com/perpaer/moment-random/actions/workflows/ci.yml)
 [![npm](https://img.shields.io/npm/v/moment-random)](https://www.npmjs.com/package/moment-random)
-
-> Generates a new random moment.js object
 
 ## Install
 
