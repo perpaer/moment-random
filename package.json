@@ -1,34 +1,59 @@
 {
   "name": "moment-random",
   "version": "1.1.0",
-  "main": "src/index.js",
-  "author": "Ivan Mrvelj <imrvelj@protonmail.com>",
   "description": "Generates a random momentjs object",
-  "license": "MIT",
-  "repository": {
-    "url": "git@github.com:imrvelj/moment-random.git",
-    "type": "git"
+  "keywords": [
+    "moment",
+    "momentjs",
+    "random",
+    "date",
+    "time"
+  ],
+  "homepage": "https://github.com/perpaer/moment-random#readme",
+  "bugs": {
+    "url": "https://github.com/perpaer/moment-random/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perpaer/moment-random.git"
+  },
+  "license": "MIT",
+  "author": "Ivan Mrvelj <imrvelj@protonmail.com>",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.cts",
   "files": [
-    "src",
-    "README.md"
+    "dist"
   ],
   "scripts": {
+    "build": "tsdown",
+    "lint": "eslint .",
     "format": "prettier . --write",
-    "lint": "eslint src",
-    "test": "jest --coverage",
-    "test:watch": "jest --watch"
+    "typecheck": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
     "moment": ">= 2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.3.0",
-    "@commitlint/config-conventional": "^17.3.0",
-    "eslint": "^8.28.0",
-    "husky": "^8.0.2",
-    "jest": "^29.3.1",
-    "moment": "^2.24.0",
-    "prettier": "^2.8.0"
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.12.0",
+    "moment": "^2.31.0",
+    "prettier": "^3.9.10",
+    "tsdown": "^0.23.1",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.71.2",
+    "vitest": "^5.0.4"
   }
 }

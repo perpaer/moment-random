@@ -1,8 +1,7 @@
 # moment-random
 
-![Build Status](https://travis-ci.org/imrvelj/moment-random.svg?branch=master)
-
-<img src="https://github.com/imrvelj/moment-random/raw/master/moment.png" style="width: 100px" />
+[![CI](https://github.com/perpaer/moment-random/actions/workflows/ci.yml/badge.svg)](https://github.com/perpaer/moment-random/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/moment-random)](https://www.npmjs.com/package/moment-random)
 
 > Generates a new random moment.js object
 
@@ -10,24 +9,15 @@
 
 _make sure you have moment installed_
 
-npm or yarn
-
 ```
-$ npm install --save moment-random
-```
-
-```
-$ yarn add moment-random
+$ npm install moment-random
 ```
 
 ## Usage
 
----
-
-Just require it like any other library
-
 ```js
-const momentRandom = require('moment-random')
+import momentRandom from 'moment-random'
+// or: const momentRandom = require('moment-random')
 
 momentRandom()
 // > random date in the past
@@ -45,4 +35,4 @@ momentRandom(end, start)
 
 **Arguments**
 
-- `end, start` - anything a moment constructor accepts (see [moment.js docs](http://momentjs.com/docs/#/parsing/) )
+- `end, start` - anything a moment constructor accepts (see [moment.js docs](https://momentjs.com/docs/#/parsing/))
